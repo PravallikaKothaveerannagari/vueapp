@@ -29,8 +29,7 @@ jobs:
       - name: Build with dotnet
         
         run: | 
-            cd vueapp
-            dotnet build --configuration Release
+            dotnet build
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
