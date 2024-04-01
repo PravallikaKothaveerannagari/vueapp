@@ -25,9 +25,12 @@ jobs:
         run : | 
                 cd vueapp
                 npm install
-                cd ..
+               
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        
+        run: | 
+            cd vueapp
+            dotnet build --configuration Release
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
