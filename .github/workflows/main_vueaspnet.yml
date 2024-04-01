@@ -25,6 +25,7 @@ jobs:
         run : | 
                 cd vueapp
                 npm install
+                cd ..
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
