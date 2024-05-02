@@ -23,7 +23,8 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
-
+      - name: Install vue cli
+        run: npm install -g @vue/cli-service
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
